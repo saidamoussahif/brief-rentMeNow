@@ -20,6 +20,7 @@ let typeDeBoiteVitesse = "";
 
 // creation boite vitesse
 const boiteVitesse = document.createElement("div")
+boiteVitesse.classList.add("boite-vitesse");
 const boiteVitesseSpan = document.createElement("span")
 boiteVitesseSpan.innerText = "Boite vitesse"
 boiteVitesse.appendChild(boiteVitesseSpan);
@@ -77,7 +78,7 @@ form.addEventListener("submit", (event) => {
 
     let prix = vehiculePrix + (vehiculePrix * boiteVitessePercentage) + (vehiculePrix * carburantPercentage)
     prix = prix * nmbrDeJour;
-    creerResultPopup(nmbrDeJour, prix, carburantPercentage, boiteVitessePercentage);
+
 })
 
 //  type de vehicule

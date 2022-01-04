@@ -24,3 +24,14 @@ form label{
 ::-webkit-scrollbar{
   display: none;
 }
+.boite-vitesse{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.new{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+}
