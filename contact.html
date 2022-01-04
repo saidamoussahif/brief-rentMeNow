@@ -1,76 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" type="text/css" href="contact.css">
-    <link rel ="stylesheet" type="text/css" href="nav.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>contact</title>
 </head>
+
 <body>
     <header class="menu">
         <nav>
             <h1 id="logo">RentMeNow</h1>
             <ul>
-                <li><a href="project.html">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="gallerie.html">Gallerie</a></li>
                 <li><a href="reservation.html">Reservation</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <span class="ouvrir"><i class="fas fa-bars"></i>
-        </span>
-        <div class="mobile">
-            <span class="fermer"><i class="fas fa-times"></i>
             </span>
-            <ul>
-                <li><a href="project.html">Accueil</a></li>
-                <li><a href="gallerie.html">Gallerie</a></li>
-                <li><a href="reservation.html">Reservation</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+            <div class="mobile">
+                <span class="fermer"><i class="fas fa-times"></i>
+                </span>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="gallerie.html">Gallerie</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <form>
         <h1>contactez-nous</h1>
-    
-    <div class="separation"></div>
-    <div class="formulaire">
 
-    <div class="informations">
+        <div class="separation"></div>
+        <div class="formulaire">
 
-        <div class="groupe"> 
-            <label>Votre nom </label>
-            <input type="text">
+            <div class="informations">
+
+                <div class="groupe">
+                    <label>Votre nom </label>
+                    <input type="text">
+                </div>
+
+                <div class="groupe">
+                    <label>Votre E-mail </label>
+                    <input type="text">
+                </div>
+
+                <div class="groupe">
+                    <label>Sujet</label>
+                    <input type="text">
+                </div>
+
+            </div>
+
+            <div class="commentaire">
+                <div class="groupe">
+                    <label>Message</label>
+                    <textarea></textarea>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-formulaire" align="center">
+            <button>Envoyer</button>
         </div>
 
-        <div class="groupe">
-            <label>Votre E-mail </label>
-            <input type="text">
-        </div>
-
-        <div class="groupe">
-            <label>Sujet</label>
-            <input type="text">
-        </div> 
-
-    </div>
-    
-    <div class="commentaire">
-        <div class="groupe">
-            <label>Message</label>
-            <textarea></textarea>
-
-        </div>
-    </div>
-    </div>
-    <div class="footer-formulaire" align="center">
-        <button>Envoyer</button>
-    </div>
-
-</form>
-<script src="main.js"></script>
+    </form>
+    <script src="main.js"></script>
 </body>
+
 </html>

@@ -15,8 +15,7 @@ let typeDeBoiteVitesse = "";
 
 
 
-//  creation result popup
-const popup = document.createElement("div");
+
 
 
 // creation boite vitesse
@@ -134,25 +133,6 @@ function creerBoiteVitesse() {
     }
 }
 
-const btn = document.createElement("button")
-btn.innerHTML = `<i class="fas fa-times"></i>`
-btn.addEventListener("click", () => {
-    popup.remove(popup)
-})
 
 
-function creerResultPopup(nombreDeJour, prix, carbPercentage, bvPercentage) {
 
-    popup.innerHTML = `
-    <p>Votre vehicule reserve</p>
-    <p>type de vehicule: ${typeDeVehicule}</p>
-    <p>type de boite vitesse: ${typeDeBoiteVitesse} (${bvPercentage}%)</p>
-    <p>type de carburant: ${typeDeCarburant} (${carbPercentage})</p>
-    <p>le prix est: ${prix}£ pour ${nombreDeJour} jours</p>
-    `
-
-    popup.prepend(btn);
-    main.appendChild(popup)
-
-
-}

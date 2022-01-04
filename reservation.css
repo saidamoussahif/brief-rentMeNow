@@ -4,9 +4,23 @@ main h1{
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    text-decoration:underline;
    margin-bottom: 30px;
-  margin-top: 30px;
+   margin-top: 30px;
 }
+
 form{
-text-align: center;
-flex-direction: column;
+  display: flex;
+  background-color: rgb(230, 228, 228);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100vw;
+  border-radius: 10px;
+  gap:  20px;
+}
+form label{
+  margin-left: 20px;
+}
+::-webkit-scrollbar{
+  display: none;
 }
