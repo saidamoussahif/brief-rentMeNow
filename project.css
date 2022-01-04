@@ -1,0 +1,100 @@
+
+  body{
+    background-image: url("./background.jpg");
+    background-attachment: fixed;
+    background-size:cover;
+    min-height: 100vh;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+   
+    
+  }
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    height: 90vh;
+    gap: 10px;
+  }
+
+  .aboutus{
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .aboutus h2{
+      font-size: 30px;
+      margin-bottom: 30px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  .Services {
+    line-height: 30px;
+    padding: 0 20px;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 10px ;
+    background-color: rgb(0, 0, 0);                                 
+    margin-top: 80px;
+}
+/*.Services:hover {
+  background-color: rgb(15, 30, 235); ;
+}*/
+.booking{
+ 
+  line-height: 30px;
+  padding: 0 20px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+}
+
+/*.booking:hover {
+  background-color: rgb(15, 30, 235);
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+    

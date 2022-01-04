@@ -1,0 +1,67 @@
+*{
+  box-sizing: border-box;
+}
+/*a.home,a:hover{
+  background-color: rgb(0, 0, 0);
+  transition: .5s;
+}*/
+
+main .carte{
+  border-radius: 5px;
+  border: 2px solid rgb(0, 0, 0);
+}
+section{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+section h3{
+  font-size: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: teal;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.gallerie .container{
+display:grid ;
+}
+.gallerie .container .carte{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carte img{
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .description{
+  padding: 15px;
+  text-align: center;
+}
+
+.gallerie{
+  margin-top: 30px;
+  padding: 0 6px;
+  justify-content: space-between;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4,1fr);
+
+}*/ 
+
+@media screen and (min-width:760px) {
+  .gallerie .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .gallerie .container{
+    gap: 10px;
+  }
+}
+
+  
