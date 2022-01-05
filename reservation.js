@@ -1,14 +1,14 @@
 console.log("bonjour")
 
 const form = document.querySelector("form");
-const formNew = form.querySelector(".new");
+const nouvelleform = form.querySelector(".new");
 const typeDeVehicules = document.querySelector("#vehicules");
 const main = document.querySelector("main");
 
 const nombreDesJours = document.querySelector("#jours");
 
 
-// global state
+// global 
 let typeDeVehicule = "moto";
 let typeDeCarburant = "";
 let typeDeBoiteVitesse = "";
@@ -30,7 +30,7 @@ const boiteVitesseData = document.createElement("span");
 
 
 // type de vihecule 
-const vehiculesBoiteVitesse = {
+const BoiteVitesseDeVehicule = {
     moto: "aucun",
     citadine: "manuelle",
     compact: "manuelle",
@@ -40,7 +40,7 @@ const vehiculesBoiteVitesse = {
     camion: "automatique",
 }
 
-const vehiculeBonus = {
+const margeDeVehicule = {
     automatique: 19,
     electrique: 5,
     hybride: 9,
@@ -48,7 +48,7 @@ const vehiculeBonus = {
     diesel: 21,
 }
 
-const vehiculesPrix = {
+const prixDeVehicule = {
     moto: 10,
     citadine: 12,
     compact: 14,
@@ -58,7 +58,7 @@ const vehiculesPrix = {
     camion: 250,
 }
 
-const carbTypes = {
+const typesDeCarb = {
     moto: ["electrique", "essence"],
     citadine: ["electrique", "hybride", "essence", "diesel"],
     compact: ["hybride", "essence", "diesel"],
@@ -71,13 +71,13 @@ const carbTypes = {
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const boiteVitessePercentage = (vehiculeBonus[typeDeBoiteVitesse] || 0) / 100;
-    const carburantPercentage = (vehiculeBonus[typeDeCarburant] || 0) / 100
-    const nmbrDeJour = nombreDesJours.value
-    const vehiculePrix = vehiculesPrix[typeDeVehicule]
+    const margeDeBoiteVitesse = (margeDeVehicule[typeDeBoiteVitesse] || 0) / 100;
+    const margeDeCarburant = (margeDeVehicule[typeDeCarburant] || 0) / 100
+    const nombreDesJours = nombreDesJours.value
+    const prixDeVehicule = prixDeVehicule[typeDeVehicule]
 
-    let prix = vehiculePrix + (vehiculePrix * boiteVitessePercentage) + (vehiculePrix * carburantPercentage)
-    prix = prix * nmbrDeJour;
+    let prix = prixDeVehicule + (prixDeVehicule * margeDeBoiteVitesse) + (prixDeVehicule * margeDeCarburant)
+    prix = prix * nombreDesJours;
 
 })
 
@@ -93,10 +93,10 @@ const carburantLabel = document.createElement("label");
 const carburantTitle = document.createElement("span")
 carburantTitle.innerText = "Type de carburant";
 carburantLabel.appendChild(carburantTitle)
-const carbTypesSelect = document.createElement("select");
+const typeDeCarburantSelect = document.createElement("select");
 
-carbTypesSelect.addEventListener("change", () => {
-    typeDeCarburant = carbTypesSelect.value;
+typeDeCarburantSelect.addEventListener("change", () => {
+    typeDeCarburant = typeDeCarburantSelect.value;
 })
 
 
@@ -105,18 +105,18 @@ carbTypesSelect.addEventListener("change", () => {
 
 
 function creerCariburant() {
-    carbTypesSelect.innerHTML = "";
-    const carbType = carbTypes[typeDeVehicule]
+    typeDeCarburantSelect.innerHTML = "";
+    const carburantType = typesDeCarb[typeDeVehicule]
 
-    const options = carbType.map(function (v) {
+    const options = carburantType.map(function (v) {
         return `<option value="${v}">${v}</option>`
     })
-    typeDeCarburant = carbType[0];
-    carbTypesSelect.innerHTML = options.join("")
+    typeDeCarburant = carburantType[0];
+    typeDeCarburantSelect.innerHTML = options.join("")
 
     //  does carburant select exist inside the form
-    if (!formNew.contains(carbTypesSelect)) {
-        formNew.appendChild(carbTypesSelect)
+    if (!nouvelleform.contains(typeDeCarburantSelect)) {
+        nouvelleform.appendChild(typeDeCarburantSelect)
     };
 }
 
@@ -124,12 +124,12 @@ function creerCariburant() {
 
 
 function creerBoiteVitesse() {
-    const tdb = vehiculesBoiteVitesse[typeDeVehicule];
-    console.log(tdb);
-    boiteVitesseData.innerText = tdb;
-    typeDeBoiteVitesse = tdb;
-    if (!formNew.contains(boiteVitesse)) {
-        formNew.appendChild(boiteVitesse);
+    const typeboite = BoiteVitesseDeVehicule[typeDeVehicule];
+    console.log(typeboite);
+    boiteVitesseData.innerText = typeboite;
+    typeDeBoiteVitesse = typeboite;
+    if (!nouvelleform.contains(boiteVitesse)) {
+        nouvelleform.appendChild(boiteVitesse);
         boiteVitesse.appendChild(boiteVitesseData)
     }
 }
